@@ -54,6 +54,10 @@ const flags = [
     flag: 'DemigirlFlag',
   },
   {
+    label: 'Gay Men',
+    flag: 'GayMenFlag',
+  },
+  {
     label: 'Genderfluid',
     flag: 'GenderfluidFlag',
   },
