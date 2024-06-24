@@ -2,15 +2,20 @@
   <v-dialog max-width="600">
     <template #activator="{ props: activatorProps }">
       <v-hover v-slot="{ isHovering, props: hoverProps }">
-        <v-card v-bind="mergeProps(hoverProps, activatorProps)" style="height: 10rem">
+        <v-card v-bind="hoverProps" style="height: 10rem">
           <component :is="flagComponent" class="h-100 w-100" />
     
           <v-overlay 
             :model-value="isHovering"
             class="justify-center align-center"
             contained
+            persistent
+            no-click-animation
           >
-            <p class="text-h4 text-white font-weight-black" v-text="props.label" />
+            <div class="d-flex justify-center align-center flex-column">
+              <p class="text-h4 text-white font-weight-black mb-1" v-text="props.label" />
+              <v-btn v-bind="activatorProps">View code</v-btn>
+            </div>
           </v-overlay>
         </v-card>
       </v-hover>
