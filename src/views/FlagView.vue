@@ -42,12 +42,24 @@ const flags = [
     flag: 'AsexualFlag',
   },
   {
+    label: 'Bisexual',
+    flag: 'BisexualFlag',
+  },
+  {
     label: 'Intersex',
     flag: 'IntersexFlag',
   },
   {
     label: 'Lesbian',
     flag: 'LesbianFlag',
+  },
+  {
+    label: 'Nonbinary',
+    flag: 'NonbinaryFlag',
+  },
+  {
+    label: 'Pansexual',
+    flag: 'PansexualFlag',
   },
   {
     label: 'Transgender',

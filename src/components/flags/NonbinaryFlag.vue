@@ -1,6 +1,9 @@
 <template>
   <div class="nonbinary-flag">
-    <div class="pink" />
+    <div class="yellow" />
+    <div class="white" />
+    <div class="purple" />
+    <div class="black" />
   </div>
 </template>
 
