@@ -12,10 +12,21 @@ jobs:
             corepack enable && \
             yarn init -2 && \
             yarn set version stable
-    - id: Build-Vue
-      uses: xRealNeon/VuePagesAction@1.0.1
-      with:
+    - name: Build Vue
+      env:
         username: 'emjrhys'
         reponame: 'css-pride-flags'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
-        useyarn: true
+      run: |
+            yarn install --immutable
+            yarn build
+            cd dist
+            ln -s index.html 404.html
+            if [ "none" !=  ${{ inputs.cname }} ]; then echo '${{ inputs.cname }}' > CNAME; fi
+            git config --global user.email "${{ inputs.gitemail }}"
+            git config --global user.name "${{ inputs.gitname }}"
+            git init
+            git add -A
+            git commit -m '${{ inputs.gitmsg }}'
+            git push -f https://${{ inputs.username }}:${{ inputs.token }}@github.com/${{ inputs.username }}/${{ inputs.reponame }}.git master:main
+      shell: bash
