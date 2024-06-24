@@ -18,7 +18,7 @@
 
     <template #default>
       <v-card theme="dark">
-        <v-card-text class="text-body-2">
+        <v-card-text class="text-body-2 overflow-auto">
           <code style="white-space: pre; line-height: 1.25rem">
             {{ rawFileContent }}
           </code>
