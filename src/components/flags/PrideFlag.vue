@@ -1,5 +1,5 @@
 <template>
-  <div class="pride-flag">
+  <div class="rainbow-flag">
     <div class="red" />
     <div class="orange" />
     <div class="yellow" />
@@ -17,7 +17,7 @@
 .indigo { background-color: #400098; }
 .violet { background-color: #8E008E; }
 
-.pride-flag {
+.rainbow-flag {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
 }

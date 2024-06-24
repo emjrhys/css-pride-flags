@@ -22,11 +22,11 @@ const flags = [
     flag: 'ProgressPrideFlag',
   },
   {
-    label: 'Pride',
+    label: 'Rainbow',
     flag: 'PrideFlag',
   },
   {
-    label: '8-Stripe Pride',
+    label: '8-Stripe Rainbow',
     flag: 'GilbertBakerPrideFlag',
   },
   {
