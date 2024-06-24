@@ -1,7 +1,7 @@
 <template>
   <div class="pt-16 text-center">
     <p class="text-h2">CSS Pride Flags</p>
-    <p class="text-subtitle-1">Click to view code</p>
+    <p class="text-subtitle-1">Click to view info</p>
   </div>
   <div class="grid h-100">
     <FlagCard 
