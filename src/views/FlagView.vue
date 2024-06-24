@@ -46,6 +46,22 @@ const flags = [
     flag: 'BisexualFlag',
   },
   {
+    label: 'Demiboy',
+    flag: 'DemiboyFlag',
+  },
+  {
+    label: 'Demigirl',
+    flag: 'DemigirlFlag',
+  },
+  {
+    label: 'Genderfluid',
+    flag: 'GenderfluidFlag',
+  },
+  {
+    label: 'Genderqueer',
+    flag: 'GenderqueerFlag',
+  },
+  {
     label: 'Intersex',
     flag: 'IntersexFlag',
   },
