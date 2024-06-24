@@ -15,10 +15,22 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # if needed
             
     - name: Build and push to deploy branch
+      env: 
+        username: 'emjrhys'
+        reponame: 'css-pride-flags'
+        cname: 'cssprideflags.com'
+        gitmsg: 'deploying'
+        token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
       run: |
             yarn install
             yarn build-only
             git config --local user.email "emjrhys@gmail.com"
             git config --local user.name "Emma Rhys"
-            git add -f dist && git commit -m "building for deploy"
-            git subtree push --force --prefix dist origin deploy
+
+            cd dist
+            ln -s index.html 404.html
+            echo '$cname' > CNAME
+            git init
+            git add -A
+            git commit -m '$gitmsg'
+            git push -f https://$username:$token@github.com/$username/$reponame.git main:deploy
