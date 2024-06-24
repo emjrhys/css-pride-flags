@@ -23,5 +23,5 @@ jobs:
             yarn install
             yarn build-only
             git add dist && git commit -m "building"
-            git subtree push --prefix dist origin gh-pages
+            git subtree push --prefix dist origin production
       shell: bash
