@@ -18,14 +18,17 @@ jobs:
       env: 
         username: 'emjrhys'
         reponame: 'css-pride-flags'
+        gitemail: 'emjrhys@gmail.com'
+        gitname: 'Emma Rhys'
         cname: 'cssprideflags.com'
-        gitmsg: 'deploying'
+        gitmsg: 'deploy'
+        useyarn: true
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
       run: |
             yarn install
             yarn build-only
-            git config --local user.email "emjrhys@gmail.com"
-            git config --local user.name "Emma Rhys"
+            git config --global user.email "$gitemail"
+            git config --global user.name "$gitname"
 
             cd dist
             ln -s index.html 404.html
