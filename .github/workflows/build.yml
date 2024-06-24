@@ -15,7 +15,9 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # if needed
             
     - name: Build and push to deploy branch
-      env: 
+    - id: Build-Vue
+      uses: xRealNeon/VuePagesAction@1.0.1
+      with:
         username: 'emjrhys'
         reponame: 'css-pride-flags'
         gitemail: 'emjrhys@gmail.com'
@@ -24,16 +26,3 @@ jobs:
         gitmsg: 'deploy'
         useyarn: true
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
-      run: |
-            yarn install
-            yarn build-only
-            git config --global user.email "$gitemail"
-            git config --global user.name "$gitname"
-
-            cd dist
-            ln -s index.html 404.html
-            echo '$cname' > CNAME
-            git init
-            git add -A
-            git commit -m '$gitmsg'
-            git push -f https://$username:$token@github.com/$username/$reponame.git main:deploy
