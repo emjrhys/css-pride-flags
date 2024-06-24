@@ -15,44 +15,43 @@
 
 <script setup lang="ts">
 import FlagCard from '@/components/FlagCard.vue'
-import * as Flags from '@/components/flags'
 
 const flags = [
   {
     label: 'Progress',
-    flag: Flags.ProgressPrideFlag,
+    flag: 'ProgressPrideFlag',
   },
   {
     label: 'Pride',
-    flag: Flags.PrideFlag,
+    flag: 'PrideFlag',
   },
   {
     label: '8-Stripe Pride',
-    flag: Flags.GilbertBakerPrideFlag,
+    flag: 'GilbertBakerPrideFlag',
   },
   {
     label: 'Agender',
-    flag: Flags.AgenderFlag,
+    flag: 'AgenderFlag',
   },
   {
     label: 'Aromantic',
-    flag: Flags.AromanticFlag,
+    flag: 'AromanticFlag',
   },
   {
     label: 'Asexual',
-    flag: Flags.AsexualFlag,
+    flag: 'AsexualFlag',
   },
   {
     label: 'Intersex',
-    flag: Flags.IntersexFlag,
+    flag: 'IntersexFlag',
   },
   {
     label: 'Lesbian',
-    flag: Flags.LesbianFlag,
+    flag: 'LesbianFlag',
   },
   {
     label: 'Transgender',
-    flag: Flags.TransgenderFlag,
+    flag: 'TransgenderFlag',
   },
 ]
 </script>

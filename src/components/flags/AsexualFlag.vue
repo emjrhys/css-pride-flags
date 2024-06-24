@@ -8,9 +8,9 @@
 </template>
 
 <style scoped>
-.black { background-color: #000; }
+.black { background-color: #000000; }
 .grey { background-color: #A3A3A3; }
-.white { background-color: #FFF; }
+.white { background-color: #FFFFFF; }
 .purple { background-color: #800080; }
 
 .asexual-flag {

@@ -29,7 +29,7 @@
 .green { background-color: #008E00; }
 .indigo { background-color: #400098; }
 .violet { background-color: #8E008E; }
-.white { background-color: #FFF; }
+.white { background-color: #FFFFFF; }
 .pink { background-color: #FFAFC8; }
 .blue { background-color: #74D7EE; }
 .brown { background-color: #613915; }
