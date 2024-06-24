@@ -14,14 +14,11 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # if needed
             
-    - name: Build Vue
-      env:
-        username: 'emjrhys'
-        reponame: 'css-pride-flags'
-        token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+    - name: Build and push to deploy branch
       run: |
             yarn install
             yarn build-only
-            git add dist && git commit -m "building"
+            git config --local user.email "emjrhys@gmail.com"
+            git config --local user.name "Emma Rhys"
+            git add dist && git commit -m "building for deploy"
             git subtree push --prefix dist origin production
-      shell: bash
