@@ -11,7 +11,7 @@
 <style scoped>
 .blue { background-color: #5BCEFA; }
 .pink { background-color: #F5A9B8; }
-.white { background-color: #FFF; }
+.white { background-color: #FFFFFF; }
 
 .transgender-flag {
   display: grid;
