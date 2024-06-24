@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16 text-center">
+  <div class="pt-16 text-center">
     <p class="text-h2">CSS Pride Flags</p>
     <p class="text-subtitle-1">Click to view code</p>
   </div>
