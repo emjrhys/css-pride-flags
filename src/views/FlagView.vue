@@ -5,7 +5,7 @@
   </div>
   <div class="grid h-100">
     <FlagCard 
-      v-for="item in flags" 
+      v-for="item in flagStore.flags" 
       :key="item.flag" 
       :flag="item.flag" 
       :label="item.label" 
@@ -15,77 +15,9 @@
 
 <script setup lang="ts">
 import FlagCard from '@/components/FlagCard.vue'
+import { useFlagStore } from '@/stores/flag'
 
-const flags = [
-  {
-    label: 'Progress',
-    flag: 'ProgressPrideFlag',
-  },
-  {
-    label: 'Rainbow',
-    flag: 'PrideFlag',
-  },
-  {
-    label: '8-Stripe Rainbow',
-    flag: 'GilbertBakerPrideFlag',
-  },
-  {
-    label: 'Agender',
-    flag: 'AgenderFlag',
-  },
-  {
-    label: 'Aromantic',
-    flag: 'AromanticFlag',
-  },
-  {
-    label: 'Asexual',
-    flag: 'AsexualFlag',
-  },
-  {
-    label: 'Bisexual',
-    flag: 'BisexualFlag',
-  },
-  {
-    label: 'Demiboy',
-    flag: 'DemiboyFlag',
-  },
-  {
-    label: 'Demigirl',
-    flag: 'DemigirlFlag',
-  },
-  {
-    label: 'Gay Men',
-    flag: 'GayMenFlag',
-  },
-  {
-    label: 'Genderfluid',
-    flag: 'GenderfluidFlag',
-  },
-  {
-    label: 'Genderqueer',
-    flag: 'GenderqueerFlag',
-  },
-  {
-    label: 'Intersex',
-    flag: 'IntersexFlag',
-  },
-  {
-    label: 'Lesbian',
-    flag: 'LesbianFlag',
-  },
-  {
-    label: 'Nonbinary',
-    flag: 'NonbinaryFlag',
-  },
-  {
-    label: 'Pansexual',
-    flag: 'PansexualFlag',
-  },
-  {
-    label: 'Transgender',
-    flag: 'TransgenderFlag',
-  },
-]
+const flagStore = useFlagStore()
 </script>
 
 <style scoped>
