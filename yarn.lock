@@ -821,6 +821,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wdns/vue-code-block@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "@wdns/vue-code-block@npm:2.3.2"
+  dependencies:
+    highlight.js: "npm:^11.8.0"
+    prismjs: "npm:^1.29.0"
+    ua-parser-js: "npm:^1.0.35"
+    vue: "npm:^3.4.10"
+  checksum: 10/d59ebc614422007206e06897211d8fd4a49c96c36639cdea07ad85920c97391088fa4ccd122c2e842fc017c51739c5494766375aeb28b3d828214f55c517ac5e
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:^2.0.0":
   version: 2.0.0
   resolution: "abbrev@npm:2.0.0"
@@ -1675,6 +1687,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"highlight.js@npm:^11.8.0":
+  version: 11.9.0
+  resolution: "highlight.js@npm:11.9.0"
+  checksum: 10/44b3e42bc096a2e5207e514826a10ff7671de315a7216ebaeba76593d4f16dfe3f7078390cb5c2b08eae657694fef4fb65d775376db48480c829c83fbc4f157a
+  languageName: node
+  linkType: hard
+
 "http-cache-semantics@npm:^4.1.1":
   version: 4.1.1
   resolution: "http-cache-semantics@npm:4.1.1"
@@ -2413,6 +2432,7 @@ __metadata:
     "@vue/eslint-config-prettier": "npm:^9.0.0"
     "@vue/eslint-config-typescript": "npm:^13.0.0"
     "@vue/tsconfig": "npm:^0.5.1"
+    "@wdns/vue-code-block": "npm:^2.3.2"
     eslint: "npm:^8.57.0"
     eslint-plugin-vue: "npm:^9.23.0"
     npm-run-all2: "npm:^6.2.0"
@@ -2426,6 +2446,13 @@ __metadata:
     vuetify: "npm:^3.6.10"
   languageName: unknown
   linkType: soft
+
+"prismjs@npm:^1.29.0":
+  version: 1.29.0
+  resolution: "prismjs@npm:1.29.0"
+  checksum: 10/2080db382c2dde0cfc7693769e89b501ef1bfc8ff4f8d25c07fd4c37ca31bc443f6133d5b7c145a73309dc396e829ddb7cc18560026d862a887ae08864ef6b07
+  languageName: node
+  linkType: hard
 
 "proc-log@npm:^3.0.0":
   version: 3.0.0
@@ -2838,6 +2865,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ua-parser-js@npm:^1.0.35":
+  version: 1.0.38
+  resolution: "ua-parser-js@npm:1.0.38"
+  checksum: 10/f2345e9bd0f9c5f85bcaa434535fae88f4bb891538e568106f0225b2c2937fbfbeb5782bd22320d07b6b3d68b350b8861574c1d7af072ff9b2362fb72d326fd9
+  languageName: node
+  linkType: hard
+
 "undici-types@npm:~5.26.4":
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
@@ -2995,7 +3029,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:^3.4.29":
+"vue@npm:^3.4.10, vue@npm:^3.4.29":
   version: 3.4.30
   resolution: "vue@npm:3.4.30"
   dependencies:
