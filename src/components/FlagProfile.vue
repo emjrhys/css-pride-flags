@@ -7,8 +7,8 @@
       <v-card-title class="text-h4 mb-1">
         {{ props.label }} Pride Flag
       </v-card-title>
-      <v-card-text class="text-body-2 overflow-auto">
-      </v-card-text>
+      <!-- <v-card-text class="text-body-2 overflow-auto">
+      </v-card-text> -->
     </v-card>
     <v-card
       class="w-100 mt-4"
@@ -19,8 +19,8 @@
         <v-code-block 
           :code="rawFileContent"
           highlightjs
-          lang="vue"
-          style="white-space: pre; line-height: 1.25rem" 
+          lang="javascript"
+          theme="stackoverflow-dark"
         />
       </v-card-text>
     </v-card>
