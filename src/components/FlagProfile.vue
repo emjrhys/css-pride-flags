@@ -16,16 +16,19 @@
       theme="dark" 
     >
       <v-card-text class="text-body-2 overflow-auto">
-        <code style="white-space: pre; line-height: 1.25rem">
-          {{ rawFileContent }}
-        </code>
+        <v-code-block 
+          :code="rawFileContent"
+          highlightjs
+          lang="vue"
+          style="white-space: pre; line-height: 1.25rem" 
+        />
       </v-card-text>
     </v-card>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { useFlagStore } from '@/stores/flag'
 
 const props = defineProps({
@@ -40,8 +43,6 @@ const props = defineProps({
 })
 
 const flagStore = useFlagStore()
-
-const viewingCode = ref(false)
 
 const flagComponent = computed(() => flagStore.getFlagComponent(props.flag))
 const rawFileContent = (await import(`@/components/flags/${props.flag}.vue?raw`)).default
