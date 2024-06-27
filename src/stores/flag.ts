@@ -12,7 +12,7 @@ export const useFlagStore = defineStore('flag', () => {
       flag: 'PrideFlag',
     },
     {
-      label: '8-Stripe Rainbow',
+      label: '8-Stripe',
       flag: 'GilbertBakerPrideFlag',
     },
     {
