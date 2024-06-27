@@ -4,7 +4,7 @@
     <p class="text-subtitle-1">Click to view code</p>
   </div>
   <div class="grid h-100">
-    <FlagCard 
+    <flag-card 
       v-for="item in flagStore.flags" 
       :key="item.flag" 
       :flag="item.flag" 

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <RouterView />
+    <router-view />
     <v-footer>
       <v-row>
         <v-col class="text-caption text-center text-disabled pb-12">
