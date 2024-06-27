@@ -1,5 +1,5 @@
 <template>
-  <v-dialog max-width="600">
+  <v-dialog fullscreen>
     <template #activator="{ props: activatorProps }">
       <v-hover v-slot="{ isHovering, props: hoverProps }">
         <v-card v-bind="mergeProps(hoverProps, activatorProps)" style="height: 10rem">
@@ -17,23 +17,15 @@
     </template>
 
     <template #default>
-      <v-card theme="dark">
-        <v-card-text class="text-body-2 overflow-auto">
-          <v-card-title class="text-h4 pa-0 mb-1">
-            {{ props.label }} Pride Flag
-          </v-card-title>
-          <code style="white-space: pre; line-height: 1.25rem">
-            {{ rawFileContent }}
-          </code>
-        </v-card-text>
-      </v-card>
+      <flag-profile :flag="props.flag" :label="props.label" />
     </template>
   </v-dialog>
 </template>
 
 <script setup type="ts">
-import * as Flags from '@/components/flags'
+import FlagProfile from '@/components/FlagProfile.vue'
 import { computed, mergeProps } from 'vue'
+import { useFlagStore } from '@/stores/flag'
 
 const props = defineProps({
   flag: {
@@ -46,6 +38,7 @@ const props = defineProps({
   }
 })
 
-const flagComponent = computed(() => Flags[props.flag])
-const rawFileContent = (await import(`@/components/flags/${props.flag}.vue?raw`)).default
+const flagStore = useFlagStore()
+
+const flagComponent = computed(() => flagStore.getFlagComponent(props.flag))
 </script>

@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import * as Flags from '@/components/flags'
 
 export const useFlagStore = defineStore('flag', () => {
   const flags = [
@@ -72,5 +73,9 @@ export const useFlagStore = defineStore('flag', () => {
     },
   ]
 
-  return { flags }
+  function getFlagComponent (componentName: string) {
+    return Flags[componentName]
+  }
+
+  return { flags, getFlagComponent }
 })
