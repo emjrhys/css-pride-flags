@@ -64,7 +64,7 @@
 }
 
 .the-progress-part div {
-  padding: 16px;
+  padding: 12px;
 }
 
 .the-progress-part .intersex-yellow:not(.circle) {
