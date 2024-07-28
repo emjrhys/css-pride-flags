@@ -8,6 +8,10 @@ export const useFlagStore = defineStore('flag', () => {
       flag: 'ProgressPrideFlag',
     },
     {
+      label: 'Progress+',
+      flag: 'IntersexProgressPrideFlag',
+    },
+    {
       label: 'Rainbow',
       flag: 'PrideFlag',
     },
